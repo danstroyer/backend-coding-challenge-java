@@ -1,9 +1,9 @@
-# REST API Endpoint for auto-complete suggestions (spring-boot implementation)
+# REST API Endpoint for auto-complete suggestions   (spring-boot implementation)
 
 
 ## Overview
 This is a spring boot implementation for the backend-coding-challenge using the following technologies
-* REST API methods expose with [swagger springfox puligin](https://springfox.github.io/springfox/docs/current/)
+* REST API methods expose with [swagger springfox plugin](https://springfox.github.io/springfox/docs/current/)
 * Spring boot implementation using Version 2.0.2
 * Java code version 1.8
 
