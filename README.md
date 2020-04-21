@@ -1,4 +1,54 @@
-# Coveo Backend Coding Challenge
+# REST API Endpoint for auto-complete suggestions (spring-boot implementation)
+
+
+## Overview
+This is a spring boot implementation for the backend-coding-challenge using the following technologies
+* REST API methods expose with [swagger springfox puligin](https://springfox.github.io/springfox/docs/current/)
+* Spring boot implementation using Version 2.0.2
+* Java code version 1.8
+
+![](https://github.com/danstroyer/backend-coding-challenge-java/blob/master/static/swagger-ui-screenshot.png)
+
+## Features
+* API exposes 3 services
+    + `/cities`      
+        Retrieves the whole list of cities available
+    + `/cities/{1}`       
+        Retireves a specific city by ID
+    + `/suggestions?q={search word}`  
+        Retrieves a list of cities based on the search term
+               
+* **HATEOAS** driven REST API providing links to relevant items in the results
+
+```
+    {
+      "id": 3,
+      "name": "Airdrie, 01, CA",
+      "latitude": 51.30011,
+      "longitude": -114.03528,
+      "score": null,
+      "links": [
+        {
+          "rel": "self",
+          "href": "https://cities-autosuggest-api.herokuapp.com/cities/3"
+        },
+        {
+          "rel": "locations",
+          "href": "https://cities-autosuggest-api.herokuapp.com/cities"
+        }
+      ]
+    }
+
+```
+
+* Score based result ordering
+
+
+
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+## Coveo Backend Coding Challenge
 (inspired by https://github.com/busbud/coding-challenge-backend-c)
 
 ## Requirements
